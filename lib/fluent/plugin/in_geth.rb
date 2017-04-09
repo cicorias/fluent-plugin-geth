@@ -14,7 +14,7 @@
 # limitations under the License.
 
 require "fluent/plugin/input"
-
+require "logger"
 
 require 'zlib'
 require 'time'
@@ -37,6 +37,8 @@ module Fluent
       def configure(conf)
         super
 
+        @logger = Logger.new(STDOUT)
+        @logger.level = Logger::DEBUG
         # You can also refer to raw parameter via conf[name].
         #@port = conf['port']
         
@@ -69,12 +71,12 @@ module Fluent
         #foobar
       end
 
-
       def emit(record, time)
         tag = "myapp.access"
         #time = Engine.now
         #record = {"message"=>"body"}
         router.emit(tag, time, record)
+        @logger.debug("i just emitted something")
       end
 
       private

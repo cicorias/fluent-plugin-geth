@@ -14,9 +14,6 @@ require "fluent/plugin/in_geth.rb"
 require "logger"
 
 
-
-  
-
 class GethInputTest < Test::Unit::TestCase
   logger = Logger.new(STDOUT)
   logger.level = Logger::DEBUG
@@ -68,6 +65,7 @@ class GethInputTest < Test::Unit::TestCase
     record = {"message"=>"body"}
 
     d.instance.emit(record, time)
+    logger.debug ("emitted record")
   end
 
 
