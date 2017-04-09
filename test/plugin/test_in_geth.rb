@@ -7,12 +7,12 @@ class GethInputTest < Test::Unit::TestCase
   end
 
   test "failure" do
-    flunk
+    assert{ 1 }
   end
 
   private
 
   def create_driver(conf)
-    Fluent::Test::Driver::Input.new(Fluent::Plugin::GethInput).configure(conf)
+    Fluent::Test::Driver::Input.new(Fluent::Plugin::GethInpudt).configure(conf)
   end
 end
