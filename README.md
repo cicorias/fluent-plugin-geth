@@ -1,6 +1,6 @@
-# <%= gem_name %>
+# fluent-plugin-geth
 
-[Fluentd](http://fluentd.org/) <%= type %> plugin to do something.
+[Fluentd](http://fluentd.org/) input plugin to do something.
 
 TODO: write description for you plugin.
 
@@ -9,7 +9,7 @@ TODO: write description for you plugin.
 ### RubyGems
 
 ```
-$ gem install <%= gem_name %>
+$ gem install fluent-plugin-geth
 ```
 
 ### Bundler
@@ -17,7 +17,7 @@ $ gem install <%= gem_name %>
 Add following line to your Gemfile:
 
 ```ruby
-gem "<%= gem_name %>"
+gem "fluent-plugin-geth"
 ```
 
 And then execute:
@@ -31,13 +31,13 @@ $ bundle
 You can generate configuration template:
 
 ```
-$ fluent-plugin-format-config <%= type %> <%= name %>
+$ fluent-plugin-format-config input geth
 ```
 
 You can copy and paste generated documents here.
 
 ## Copyright
 
-* Copyright(c) <%= Date.today.year %>- <%= user_name %>
+* Copyright(c) 2017- cicorias
 * License
-  * <%= @license.full_name %>
+  * Apache License, Version 2.0
